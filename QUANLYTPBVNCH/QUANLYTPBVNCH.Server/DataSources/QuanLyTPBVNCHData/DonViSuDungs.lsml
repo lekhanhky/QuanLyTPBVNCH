@@ -92,7 +92,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Logo"
-        PropertyType=":Binary?">
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
         <EntityProperty.Attributes>
           <NotSortable />
           <MaxLength />

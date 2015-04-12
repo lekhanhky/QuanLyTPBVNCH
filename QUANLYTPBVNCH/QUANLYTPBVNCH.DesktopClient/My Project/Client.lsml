@@ -45,24 +45,62 @@
     <ApplicationCommand
       Name="ScreenCommandShowXuatSanPhamsListDetail"
       Target="!module/Methods[ShowXuatSanPhamsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowBenhsListDetail"
+      Target="!module/Methods[ShowBenhsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowChuongTrinhsListDetail"
+      Target="!module/Methods[ShowChuongTrinhsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowDoiTuongsListDetail"
+      Target="!module/Methods[ShowDoiTuongsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowDonViSuDungsListDetail"
+      Target="!module/Methods[ShowDonViSuDungsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowDonViTinhsListDetail"
+      Target="!module/Methods[ShowDonViTinhsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowNhomSanPhamsListDetail"
+      Target="!module/Methods[ShowNhomSanPhamsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowSanPhamsListDetail"
+      Target="!module/Methods[ShowSanPhamsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowThuongPheBinhsListDetail"
+      Target="!module/Methods[ShowThuongPheBinhsListDetail]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
-      Name="Tasks"
-      DefaultItem="!module/NavigationItems[Tasks]/Children[NhapSanPhamsListDetail]">
+      Name="Tasks">
       <ApplicationNavigationGroup.Attributes>
         <DisplayName
-          Value="Tasks" />
+          Value="DANH MỤC" />
       </ApplicationNavigationGroup.Attributes>
       <ApplicationNavigationLink
-        Name="NhapSanPhamsListDetail"
-        Command="!module/Commands[ScreenCommandShowNhapSanPhamsListDetail]" />
+        Name="BenhsListDetail"
+        Command="!module/Commands[ScreenCommandShowBenhsListDetail]" />
       <ApplicationNavigationLink
-        Name="NhapSanPhamDauKiesListDetail"
-        Command="!module/Commands[ScreenCommandShowNhapSanPhamDauKiesListDetail]" />
+        Name="ChuongTrinhsListDetail"
+        Command="!module/Commands[ScreenCommandShowChuongTrinhsListDetail]" />
       <ApplicationNavigationLink
-        Name="XuatSanPhamsListDetail"
-        Command="!module/Commands[ScreenCommandShowXuatSanPhamsListDetail]" />
+        Name="DoiTuongsListDetail"
+        Command="!module/Commands[ScreenCommandShowDoiTuongsListDetail]" />
+      <ApplicationNavigationLink
+        Name="DonViSuDungsListDetail"
+        Command="!module/Commands[ScreenCommandShowDonViSuDungsListDetail]" />
+      <ApplicationNavigationLink
+        Name="DonViTinhsListDetail"
+        Command="!module/Commands[ScreenCommandShowDonViTinhsListDetail]" />
+      <ApplicationNavigationLink
+        Name="NhomSanPhamsListDetail"
+        Command="!module/Commands[ScreenCommandShowNhomSanPhamsListDetail]" />
+      <ApplicationNavigationLink
+        Name="SanPhamsListDetail"
+        Command="!module/Commands[ScreenCommandShowSanPhamsListDetail]" />
+      <ApplicationNavigationLink
+        Name="ThuongPheBinhsListDetail"
+        Command="!module/Commands[ScreenCommandShowThuongPheBinhsListDetail]" />
     </ApplicationNavigationGroup>
     <ApplicationNavigationGroup
       Name="Administration">
@@ -76,6 +114,29 @@
       <ApplicationNavigationLink
         Name="UsersScreen"
         Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group1">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="NHẬP THUỐC DC" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link"
+        Command="!module/Commands[ScreenCommandShowNhapSanPhamDauKiesListDetail]" />
+      <ApplicationNavigationLink
+        Name="link1"
+        Command="!module/Commands[ScreenCommandShowNhapSanPhamsListDetail]" />
+    </ApplicationNavigationGroup>
+    <ApplicationNavigationGroup
+      Name="group">
+      <ApplicationNavigationGroup.Attributes>
+        <DisplayName
+          Value="KHÁM" />
+      </ApplicationNavigationGroup.Attributes>
+      <ApplicationNavigationLink
+        Name="link2"
+        Command="!module/Commands[ScreenCommandShowXuatSanPhamsListDetail]" />
     </ApplicationNavigationGroup>
   </Application.NavigationItems>
 </Application>

@@ -40,11 +40,20 @@
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
+          <SupportedValue
+            DisplayName="Nam"
+            Value="0" />
+          <SupportedValue
+            DisplayName="Nữ"
+            Value="1" />
+          <SupportedValue
+            DisplayName="Khác"
+            Value="2" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="Hình"
-        PropertyType=":Binary?">
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
         <EntityProperty.Attributes>
           <NotSortable />
           <MaxLength />

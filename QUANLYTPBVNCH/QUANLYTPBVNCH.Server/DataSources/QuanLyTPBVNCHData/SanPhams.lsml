@@ -67,12 +67,22 @@
         Name="DonViTinh"
         Association="FK_Sản_Phẩm_Đơn_Vị_Tính"
         FromEnd="SanPham"
-        ToEnd="DonViTinh" />
+        ToEnd="DonViTinh">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Đơn vị tính" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="NhomSanPham"
         Association="FK_Sản_Phẩm_Nhóm_Sản_Phẩm"
         FromEnd="SanPham"
-        ToEnd="NhomSanPham" />
+        ToEnd="NhomSanPham">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Nhóm sản phẩm" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="XuatSanPhamChiTiets"
         Association="FK_Xuất_Sản_Phẩm_Chi_Tiết_Sản_Phẩm"

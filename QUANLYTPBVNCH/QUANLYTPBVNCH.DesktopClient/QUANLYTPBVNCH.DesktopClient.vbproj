@@ -295,11 +295,29 @@
       <Link>UserCode\Shared\XuatSanPhamChiTiet.lsml.vb</Link>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Screens\BenhsListDetail.lsml.vb">
+      <DependentUpon>BenhsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ChuongTrinhsListDetail.lsml.vb">
+      <DependentUpon>ChuongTrinhsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DonViTinhsListDetail.lsml.vb">
+      <DependentUpon>DonViTinhsListDetail.lsml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\NhapSanPhamDauKiesListDetail.lsml.vb">
       <DependentUpon>NhapSanPhamDauKiesListDetail.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\NhapSanPhamsListDetail.lsml.vb">
       <DependentUpon>NhapSanPhamsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NhomSanPhamsListDetail.lsml.vb">
+      <DependentUpon>NhomSanPhamsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SanPhamsListDetail.lsml.vb">
+      <DependentUpon>SanPhamsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ThuongPheBinhsListDetail.lsml.vb">
+      <DependentUpon>ThuongPheBinhsListDetail.lsml</DependentUpon>
     </Compile>
     <Compile Include="Screens\XuatSanPhamsListDetail.lsml.vb">
       <DependentUpon>XuatSanPhamsListDetail.lsml</DependentUpon>
@@ -316,6 +334,14 @@
     <LightSwitchModel Include="Screens\NhapSanPhamsListDetail.lsml" />
     <LightSwitchModel Include="Screens\NhapSanPhamDauKiesListDetail.lsml" />
     <LightSwitchModel Include="Screens\XuatSanPhamsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\BenhsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\ChuongTrinhsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\DoiTuongsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\DonViSuDungsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\DonViTinhsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\NhomSanPhamsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\SanPhamsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\ThuongPheBinhsListDetail.lsml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\close.png" />
