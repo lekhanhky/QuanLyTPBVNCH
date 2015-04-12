@@ -15,8 +15,8 @@
     <AssemblyName>Application.Server</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <LightSwitchVersion>v4.5</LightSwitchVersion>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultLanguage>vi</DefaultLanguage>
+    <SupportedCultures>vi</SupportedCultures>
     <FileAlignment>512</FileAlignment>
     <LightSwitchProjectTypeV45>Server</LightSwitchProjectTypeV45>
     <OptionExplicit>On</OptionExplicit>
@@ -73,6 +73,12 @@
     <Import Include="LightSwitchApplication" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="C1.LightSwitch.FlexGrid.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Server\Reference\C1.LightSwitch.FlexGrid.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.FlexGrid.Server">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Server\Reference\C1.LightSwitch.FlexGrid.Server.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.LightSwitch.Extensions.Server">
       <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
     </Reference>
@@ -204,6 +210,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamChiTiet.lsml.vb">
+      <DependentUpon>NhapSanPhamChiTiets.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamDauKyChiTiet.lsml.vb">
+      <DependentUpon>NhapSanPhamDauKyChiTiets.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSources\QuanLyTPBVNCHData\XuatSanPhamChiTiet.lsml.vb">
+      <DependentUpon>XuatSanPhamChiTiets.lsml</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -218,10 +233,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\Benhs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\ChuongTrinhs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\DoiTuongs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\DonViSuDungs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\DonViTinhs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\Nams.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\NhapSanPhams.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamChiTiets.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamDauKies.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamDauKyChiTiets.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\NhomSanPhams.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\SanPhams.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\Thangs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\ThuongPheBinhs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhams.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhamBenhs.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhamChiTiets.lsml" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <LightSwitchModel Include="My Project\DataSources\QuanLyTPBVNCHData.lsml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -252,9 +285,7 @@
   <ItemGroup>
     <AppDesigner Include="My Project\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

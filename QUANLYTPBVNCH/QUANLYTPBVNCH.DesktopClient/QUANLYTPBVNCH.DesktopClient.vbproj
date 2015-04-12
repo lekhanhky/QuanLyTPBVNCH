@@ -10,7 +10,7 @@
     <SchemaVersion>
     </SchemaVersion>
     <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    <ProjectGuid>{6390f14f-9f14-4e5e-be6d-5ebc42100f53}</ProjectGuid>
+    <ProjectGuid>{6390F14F-9F14-4E5E-BE6D-5EBC42100F53}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>
     </RootNamespace>
@@ -20,8 +20,8 @@
     <LightSwitchVersion>v4.5</LightSwitchVersion>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
     <SilverlightApplication>true</SilverlightApplication>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultLanguage>vi</DefaultLanguage>
+    <SupportedCultures>vi</SupportedCultures>
     <XapOutputs>true</XapOutputs>
     <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
     <XapFilename>QUANLYTPBVNCH.DesktopClient.xap</XapFilename>
@@ -76,6 +76,39 @@
     <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C1.LightSwitch.FlexGrid.Client">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.LightSwitch.FlexGrid.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.LightSwitch.FlexGrid.Client.Design">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\DebugOnlyRef\C1.LightSwitch.FlexGrid.Client.Design.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="C1.LightSwitch.FlexGrid.Common">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.LightSwitch.FlexGrid.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.5.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="C1.Silverlight.DateTimeEditors.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.DateTimeEditors.5.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Excel.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.Excel.5.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Extended.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.Extended.5.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="C1.Silverlight.FlexGrid.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.FlexGrid.5.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.FlexGridFilter.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.FlexGridFilter.5.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Silverlight.Zip.5">
+      <HintPath>..\_Pvt_Extensions\C1.LightSwitch.FlexGrid\Client\Reference\C1.Silverlight.Zip.5.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.LightSwitch, Version=10.0.12.1, Culture=neutral, PublicKeyToken=8e9329cecb4700e9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>$(LightSwitchSDKPath)\Client\Microsoft.LightSwitch.dll</HintPath>
@@ -252,7 +285,25 @@
     <Import Include="Microsoft.LightSwitch.Presentation.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\QUANLYTPBVNCH.Server\DataSources\QuanLyTPBVNCHData\NhapSanPhamChiTiet.lsml.vb">
+      <Link>UserCode\Shared\NhapSanPhamChiTiet.lsml.vb</Link>
+    </Compile>
+    <Compile Include="..\QUANLYTPBVNCH.Server\DataSources\QuanLyTPBVNCHData\NhapSanPhamDauKyChiTiet.lsml.vb">
+      <Link>UserCode\Shared\NhapSanPhamDauKyChiTiet.lsml.vb</Link>
+    </Compile>
+    <Compile Include="..\QUANLYTPBVNCH.Server\DataSources\QuanLyTPBVNCHData\XuatSanPhamChiTiet.lsml.vb">
+      <Link>UserCode\Shared\XuatSanPhamChiTiet.lsml.vb</Link>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Screens\NhapSanPhamDauKiesListDetail.lsml.vb">
+      <DependentUpon>NhapSanPhamDauKiesListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\NhapSanPhamsListDetail.lsml.vb">
+      <DependentUpon>NhapSanPhamsListDetail.lsml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\XuatSanPhamsListDetail.lsml.vb">
+      <DependentUpon>XuatSanPhamsListDetail.lsml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="My Project\Client.lsml">
@@ -261,9 +312,13 @@
     <None Include="My Project\AppManifest.xml" />
     <None Include="My Project\OutOfBrowserSettings.xml" />
     <ClientResource Include="My Project\Config.xml" />
+    <LightSwitchModel Include="My Project\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\NhapSanPhamsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\NhapSanPhamDauKiesListDetail.lsml" />
+    <LightSwitchModel Include="Screens\XuatSanPhamsListDetail.lsml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Screens\" />
+    <Resource Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="default.htm">
@@ -281,4 +336,17 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Debug|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+      <FlavorProperties GUID="{8BB0C5E8-0616-4F60-8E55-A43933E57E9C}" Configuration="Release|Any CPU">
+        <SpecializedConfiguration />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

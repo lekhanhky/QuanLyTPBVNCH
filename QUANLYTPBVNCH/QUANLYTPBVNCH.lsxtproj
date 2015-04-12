@@ -26,6 +26,7 @@
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
+    <DefaultLanguage>vi</DefaultLanguage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug</OutputPath>
@@ -112,6 +113,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.FlexGrid.lspkg">
+      <ExtensionId>C1.LightSwitch.FlexGrid</ExtensionId>
+      <Client>C1.LIGHTSWITCH.FLEXGRID.CLIENT;C1.LIGHTSWITCH.FLEXGRID.COMMON;C1.SILVERLIGHT.5;C1.SILVERLIGHT.FLEXGRID.5;C1.SILVERLIGHT.FLEXGRIDFILTER.5;C1.SILVERLIGHT.EXTENDED.5;C1.SILVERLIGHT.ZIP.5;C1.SILVERLIGHT.EXCEL.5;C1.SILVERLIGHT.DATETIMEEDITORS.5;C1.LIGHTSWITCH.FLEXGRID.CLIENT.DESIGN</Client>
+      <Server>C1.LIGHTSWITCH.FLEXGRID.COMMON;C1.LIGHTSWITCH.FLEXGRID.SERVER</Server>
+    </LightSwitchExtension>
     <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Cosmopolitan.lspkg">
       <ExtensionId>Microsoft.LightSwitch.Cosmopolitan</ExtensionId>
       <Client>MICROSOFT.LIGHTSWITCH.COSMOPOLITAN.CLIENT</Client>

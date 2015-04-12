@@ -24,5 +24,14 @@
     <ExtensionAssembly>Microsoft.LightSwitch.SdkProxy, Version=10.0.12.1, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.FlexGrid.Client, Version=4.0.20142.62, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.LightSwitch.FlexGrid.Common, Version=4.0.20142.62, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.FlexGrid.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.FlexGridFilter.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Extended.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Zip.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.Excel.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>C1.Silverlight.DateTimeEditors.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
   </ExtensionAssemblies>
 </Configuration>

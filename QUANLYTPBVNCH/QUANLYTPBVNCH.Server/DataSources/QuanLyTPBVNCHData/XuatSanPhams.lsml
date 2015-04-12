@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="XuatSanPham">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Id"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+          <DisplayName
+            Value="Mã" />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Ngày_xuất"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ghi_chú"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="XuatSanPhamChiTiets"
+        Association="FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm"
+        FromEnd="XuatSanPham"
+        ToEnd="XuatSanPhamChiTiet" />
+      <NavigationProperty
+        Name="ChuongTrinh"
+        Association="FK_Xuất_Sản_Phẩm_ChuongTrinh"
+        FromEnd="XuatSanPham"
+        ToEnd="ChuongTrinh">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Chương trình" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="ThuongPheBinh"
+        Association="FK_Xuất_Sản_Phẩm_ThuongPheBinh"
+        FromEnd="XuatSanPham"
+        ToEnd="ThuongPheBinh">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Thương phế binh" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
+        Name="XuatSanPhamBenhs"
+        Association="FK_XuatSanPhamBenh_Xuất_Sản_Phẩm"
+        FromEnd="XuatSanPham"
+        ToEnd="XuatSanPhamBenh" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm">
+    <AssociationEnd
+      Name="XuatSanPham"
+      Multiplicity="One"
+      EntityType="XuatSanPham">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="XuatSanPhamChiTiet"
+      Multiplicity="Many"
+      EntityType="XuatSanPhamChiTiet" />
+  </Association>
+  <Association
+    Name="FK_XuatSanPhamBenh_Xuất_Sản_Phẩm">
+    <AssociationEnd
+      Name="XuatSanPham"
+      Multiplicity="One"
+      EntityType="XuatSanPham">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Cascade" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="XuatSanPhamBenh"
+      Multiplicity="Many"
+      EntityType="XuatSanPhamBenh" />
+  </Association>
+  <EntityContainer
+    Name="QuanLyTPBVNCHData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="XuatSanPhams"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="XuatSanPham" />
+    <AssociationSet
+      Name="FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm"
+      Association="FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm">
+      <AssociationSetEnd
+        Name="XuatSanPham"
+        EntitySet="XuatSanPhams" />
+      <AssociationSetEnd
+        Name="XuatSanPhamChiTiet"
+        EntitySet="XuatSanPhamChiTiets" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_XuatSanPhamBenh_Xuất_Sản_Phẩm"
+      Association="FK_XuatSanPhamBenh_Xuất_Sản_Phẩm">
+      <AssociationSetEnd
+        Name="XuatSanPham"
+        EntitySet="XuatSanPhams" />
+      <AssociationSetEnd
+        Name="XuatSanPhamBenh"
+        EntitySet="XuatSanPhamBenhs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="XuatSanPhams_Single"
+      ReturnType="XuatSanPham">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="XuatSanPhams" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+          <DisplayName
+            Value="Mã" />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="XuatSanPhams_SingleOrDefault"
+      ReturnType="XuatSanPham">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="XuatSanPhams" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+          <DisplayName
+            Value="Mã" />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="QuanLyTPBVNCHDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="XuatSanPhams">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="XuatSanPham" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="XuatSanPham/Properties[Id]" />
+        <SsdlProperty
+          Name="Ngày xuất"
+          Nullable="False"
+          Type="date"
+          Property="XuatSanPham/Properties[Ngày_xuất]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Ghi chú"
+          Nullable="True"
+          Type="nvarchar"
+          Property="XuatSanPham/Properties[Ghi_chú]" />
+        <SsdlForeignKeyProperty
+          Name="XuatSanPham_ChuongTrinh"
+          Nullable="False"
+          Type="int"
+          PropertyName="XuatSanPham_ChuongTrinh" />
+        <SsdlForeignKeyProperty
+          Name="XuatSanPham_ThuongPheBinh"
+          Nullable="False"
+          Type="int"
+          PropertyName="XuatSanPham_ThuongPheBinh" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Xuất Sản Phẩm Chi Tiết_Xuất Sản Phẩm" />
+        <SsdlAssociationSetEnd
+          End="QuanLyTPBVNCHData/Members[FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm]/Members[XuatSanPham]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="QuanLyTPBVNCHData/Members[FK_Xuất_Sản_Phẩm_Chi_Tiết_Xuất_Sản_Phẩm]/Members[XuatSanPhamChiTiet]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="XuatSanPhamChiTiet_XuatSanPham" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_XuatSanPhamBenh_Xuất_Sản_Phẩm">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_XuatSanPhamBenh_Xuất Sản Phẩm" />
+        <SsdlAssociationSetEnd
+          End="QuanLyTPBVNCHData/Members[FK_XuatSanPhamBenh_Xuất_Sản_Phẩm]/Members[XuatSanPham]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="QuanLyTPBVNCHData/Members[FK_XuatSanPhamBenh_Xuất_Sản_Phẩm]/Members[XuatSanPhamBenh]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="XuatSanPhamBenh_XuatSanPham" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>
