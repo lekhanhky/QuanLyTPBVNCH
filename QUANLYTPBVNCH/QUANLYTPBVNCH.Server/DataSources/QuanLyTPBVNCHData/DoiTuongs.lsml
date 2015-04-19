@@ -23,6 +23,8 @@
           <Hidden />
           <Required />
           <NotSearchable />
+          <DisplayName
+            Value="Mã" />
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
@@ -61,7 +63,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Email"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
@@ -69,7 +71,7 @@
       </EntityProperty>
       <EntityProperty
         Name="Website"
-        PropertyType=":String?">
+        PropertyType="Microsoft.LightSwitch.Extensions:WebAddress?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
@@ -185,6 +187,8 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
+          <DisplayName
+            Value="Mã" />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
@@ -225,6 +229,8 @@
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
+          <DisplayName
+            Value="Mã" />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>

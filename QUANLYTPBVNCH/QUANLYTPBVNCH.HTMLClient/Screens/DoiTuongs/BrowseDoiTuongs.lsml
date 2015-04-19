@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="BrowseXuatSanPhams">
+    Name="BrowseDoiTuongs">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="QuanLyTPBVNCHData" />
       <DisplayName
-        Value="PHIẾU KHÁM PHÁT THUỐC DC" />
+        Value="NHÀ CUNG CẤP" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -22,29 +22,29 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="XuatSanPhamList"
+            Name="DoiTuongList"
             Kind="Group">
             <ContentItem
-              Name="XuatSanPhams"
+              Name="DoiTuongs"
               Kind="Collection"
-              DataType="CollectionView$XuatSanPham"
-              View="Microsoft.LightSwitch.MobileWeb:Table">
+              DataType="CollectionView$DoiTuong"
+              View="Microsoft.LightSwitch.MobileWeb:TileList">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="XuatSanPhams" />
+                  Value="DoiTuongs" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseXuatSanPhams/Properties[XuatSanPhams]" />
+                      Member="BrowseDoiTuongs/Properties[DoiTuongs]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
                 Name="rows"
                 Kind="Details"
-                DataType="XuatSanPham"
+                DataType="DoiTuong"
                 View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -63,20 +63,45 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="XuatSanPham/Properties[Id]" />
+                          Member="DoiTuong/Properties[Id]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Ngày_xuất"
+                  Name="Tên"
                   Kind="Value"
-                  DataType=":Date">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="XuatSanPham/Properties[Ngày_xuất]" />
+                          Member="DoiTuong/Properties[Tên]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="Large"
+                            ResultType=":String" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="Điện_thoại_di_động"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="DoiTuong/Properties[Điện_thoại_di_động]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -94,27 +119,17 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="ChuongTrinh"
-                  Kind="Details"
-                  DataType="ChuongTrinh">
+                  Name="Điện_thoại_bàn"
+                  Kind="Value"
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="XuatSanPham/Properties[ChuongTrinh]" />
+                          Member="DoiTuong/Properties[Điện_thoại_bàn]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate1"
-                    Kind="Details"
-                    DataType="ChuongTrinh">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                   <ContentItem.PropertySources>
                     <ControlPropertySource
                       Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
@@ -127,29 +142,6 @@
                       </ScreenExpressionTree>
                     </ControlPropertySource>
                   </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
-                  Name="ThuongPheBinh"
-                  Kind="Details"
-                  DataType="ThuongPheBinh">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="XuatSanPham/Properties[ThuongPheBinh]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="ThuongPheBinh1"
-                    Kind="Details"
-                    DataType="ThuongPheBinh">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
                 </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -170,16 +162,16 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showAddEditXuatSanPham]">
+                        Target="!module/Methods[showViewDoiTuong]">
                         <CallExpression.Attributes>
                           <AssociatedCollection
-                            Collection="BrowseXuatSanPhams/Properties[XuatSanPhams]" />
+                            Collection="BrowseDoiTuongs/Properties[DoiTuongs]" />
                         </CallExpression.Attributes>
                         <ArgumentExpression
-                          Parameter="XuatSanPham">
+                          Parameter="DoiTuong">
                           <ChainExpression>
                             <MemberExpression
-                              Member="BrowseXuatSanPhams/Properties[XuatSanPhams]" />
+                              Member="BrowseDoiTuongs/Properties[DoiTuongs]" />
                             <MemberExpression
                               Member="selectedItem" />
                           </ChainExpression>
@@ -188,21 +180,11 @@
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="msls-edit"
-                        ResultType=":String" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
               </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="AddXuatSanPham"
+                Name="AddDoiTuong"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -214,12 +196,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditXuatSanPham]">
+                          Target="!module/Methods[showAddEditDoiTuong]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseXuatSanPhams/Properties[XuatSanPhams]" />
+                              Collection="BrowseDoiTuongs/Properties[DoiTuongs]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showAddEditXuatSanPham]/Parameters[XuatSanPham]" />
+                              TargetParameter="!module/Methods[showAddEditDoiTuong]/Parameters[DoiTuong]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -238,11 +220,11 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="SearchXuatSanPhams"
+                Name="SearchDoiTuongs"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="TÌM KIẾM" />
+                    Value="TÌM" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -250,7 +232,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="BrowseXuatSanPhams/Properties[XuatSanPhams]" />
+                          Member="BrowseDoiTuongs/Properties[DoiTuongs]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -315,20 +297,20 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="XuatSanPhams"
+        Name="DoiTuongs"
         PageSize="45"
-        PropertyType="CollectionView$XuatSanPham">
+        PropertyType="CollectionView$DoiTuong">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="XuatSanPhamsQuery"
-            ReturnType="XuatSanPham*">
+            Name="DoiTuongsQuery"
+            ReturnType="DoiTuong*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="QuanLyTPBVNCHData/Members[XuatSanPhams]" />
+                  Member="QuanLyTPBVNCHData/Members[DoiTuongs]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -336,7 +318,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseXuatSanPhams/Properties[XuatSanPhams]/Query" />
+              Target="BrowseDoiTuongs/Properties[DoiTuongs]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -344,10 +326,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showBrowseXuatSanPhams">
+      Name="showBrowseDoiTuongs">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="BrowseXuatSanPhams" />
+          TargetScreen="BrowseDoiTuongs" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

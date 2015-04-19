@@ -83,3 +83,13 @@ myapp.AddEditXuatSanPham.Xóa_Thuốc_DC_execute = function (screen) {
 
      });
 };
+myapp.AddEditXuatSanPham.ShowBenh_execute = function (screen) {
+    // Write code here.
+    $(window).one("popupbeforeposition", function (e) {
+        $(e.target).popup({
+            positionTo: "window"
+        });
+    });
+    // Show the Popup
+    screen.showPopup("Group");
+};

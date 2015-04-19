@@ -348,14 +348,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="AddEditXuatSanPham/Methods[showDialog]">
-                          <ArgumentExpression
-                            Parameter="dialogName">
-                            <ConstantExpression
-                              Value="Group"
-                              ResultType=":String" />
-                          </ArgumentExpression>
-                        </CallExpression>
+                          Target="AddEditXuatSanPham/Methods[ShowBenh]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -630,6 +623,8 @@
         Name="Xóa_Bệnh" />
       <ScreenMethod
         Name="Xóa_Thuốc_DC" />
+      <ScreenMethod
+        Name="ShowBenh" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

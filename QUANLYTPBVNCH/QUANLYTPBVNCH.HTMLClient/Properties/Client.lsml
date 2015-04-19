@@ -38,5 +38,26 @@
     <ApplicationNavigationMethodLink
       Name="link"
       Method="!module/Methods[showBrowseXuatSanPhams]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showBrowseBenhs]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseChuongTrinhs]" />
+    <ApplicationNavigationMethodLink
+      Name="link3"
+      Method="!module/Methods[showBrowseDoiTuongs]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showBrowseDonViTinhs]" />
+    <ApplicationNavigationMethodLink
+      Name="link5"
+      Method="!module/Methods[showBrowseNhomSanPhams]" />
+    <ApplicationNavigationMethodLink
+      Name="link6"
+      Method="!module/Methods[showBrowseSanPhams]" />
+    <ApplicationNavigationMethodLink
+      Name="link7"
+      Method="!module/Methods[showBrowseThuongPheBinhs]" />
   </Application.NavigationItems>
 </Application>

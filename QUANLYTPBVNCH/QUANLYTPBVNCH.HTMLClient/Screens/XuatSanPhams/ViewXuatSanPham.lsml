@@ -10,7 +10,7 @@
       <SaveChangesTo
         EntityContainer="QuanLyTPBVNCHData" />
       <DisplayName
-        Value="XuatSanPham" />
+        Value="KHÁM BỆNH - PHÁT THUỐC DC" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -49,6 +49,19 @@
               <ContentItem
                 Name="left"
                 Kind="Group">
+                <ContentItem
+                  Name="Id"
+                  Kind="Value"
+                  DataType=":Int32">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="XuatSanPham/Properties[Id]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
                 <ContentItem
                   Name="Ngày_xuất"
                   Kind="Value"
@@ -177,7 +190,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Edit" />
+                    Value="SỬA" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource

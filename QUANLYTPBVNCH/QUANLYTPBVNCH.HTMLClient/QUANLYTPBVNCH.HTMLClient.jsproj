@@ -85,8 +85,29 @@
     <Content Include="Content\Web.config" />
     <Content Include="default.htm" />
     <Content Include="packages.config" />
+    <Content Include="Screens\Benhs\ViewBenh.lsml.js">
+      <DependentUpon>ViewBenh.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ChuongTrinhs\ViewChuongTrinh.lsml.js">
+      <DependentUpon>ViewChuongTrinh.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\DoiTuongs\ViewDoiTuong.lsml.js">
+      <DependentUpon>ViewDoiTuong.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\DonViTinhs\ViewDonViTinh.lsml.js">
+      <DependentUpon>ViewDonViTinh.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Home.lsml.js">
       <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\NhomSanPhams\ViewNhomSanPham.lsml.js">
+      <DependentUpon>ViewNhomSanPham.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\SanPhams\ViewSanPham.lsml.js">
+      <DependentUpon>ViewSanPham.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ThuongPheBinhs\ViewThuongPheBinh.lsml.js">
+      <DependentUpon>ViewThuongPheBinh.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\XuatSanPhams\AddEditXuatSanPham.lsml.js">
       <DependentUpon>AddEditXuatSanPham.lsml</DependentUpon>
@@ -144,8 +165,36 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\Benhs.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\ChuongTrinhs.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\DoiTuongs.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\DonViTinhs.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\NhomSanPhams.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\SanPhams.lsml" />
+    <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\ThuongPheBinhs.lsml" />
     <LightSwitchModel Include="Properties\QuanLyTPBVNCHData\XuatSanPhams.lsml" />
+    <LightSwitchModel Include="Screens\Benhs\AddEditBenh.lsml" />
+    <LightSwitchModel Include="Screens\Benhs\BrowseBenhs.lsml" />
+    <LightSwitchModel Include="Screens\Benhs\ViewBenh.lsml" />
+    <LightSwitchModel Include="Screens\ChuongTrinhs\AddEditChuongTrinh.lsml" />
+    <LightSwitchModel Include="Screens\ChuongTrinhs\BrowseChuongTrinhs.lsml" />
+    <LightSwitchModel Include="Screens\ChuongTrinhs\ViewChuongTrinh.lsml" />
+    <LightSwitchModel Include="Screens\DoiTuongs\AddEditDoiTuong.lsml" />
+    <LightSwitchModel Include="Screens\DoiTuongs\BrowseDoiTuongs.lsml" />
+    <LightSwitchModel Include="Screens\DoiTuongs\ViewDoiTuong.lsml" />
+    <LightSwitchModel Include="Screens\DonViTinhs\AddEditDonViTinh.lsml" />
+    <LightSwitchModel Include="Screens\DonViTinhs\BrowseDonViTinhs.lsml" />
+    <LightSwitchModel Include="Screens\DonViTinhs\ViewDonViTinh.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\NhomSanPhams\AddEditNhomSanPham.lsml" />
+    <LightSwitchModel Include="Screens\NhomSanPhams\BrowseNhomSanPhams.lsml" />
+    <LightSwitchModel Include="Screens\NhomSanPhams\ViewNhomSanPham.lsml" />
+    <LightSwitchModel Include="Screens\SanPhams\AddEditSanPham.lsml" />
+    <LightSwitchModel Include="Screens\SanPhams\BrowseSanPhams.lsml" />
+    <LightSwitchModel Include="Screens\SanPhams\ViewSanPham.lsml" />
+    <LightSwitchModel Include="Screens\ThuongPheBinhs\AddEditThuongPheBinh.lsml" />
+    <LightSwitchModel Include="Screens\ThuongPheBinhs\BrowseThuongPheBinhs.lsml" />
+    <LightSwitchModel Include="Screens\ThuongPheBinhs\ViewThuongPheBinh.lsml" />
     <LightSwitchModel Include="Screens\XuatSanPhams\AddEditXuatSanPham.lsml" />
     <LightSwitchModel Include="Screens\XuatSanPhams\BrowseXuatSanPhams.lsml" />
     <LightSwitchModel Include="Screens\XuatSanPhams\ViewXuatSanPham.lsml" />

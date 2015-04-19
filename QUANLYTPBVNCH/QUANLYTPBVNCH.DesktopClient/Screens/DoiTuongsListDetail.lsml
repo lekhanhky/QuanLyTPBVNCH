@@ -105,7 +105,7 @@
                 <ContentItem
                   Name="Email"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -118,7 +118,7 @@
                 <ContentItem
                   Name="Website"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -339,7 +339,7 @@
                 <ContentItem
                   Name="Email1"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -352,7 +352,7 @@
                 <ContentItem
                   Name="Website1"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType="Microsoft.LightSwitch.Extensions:WebAddress?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
