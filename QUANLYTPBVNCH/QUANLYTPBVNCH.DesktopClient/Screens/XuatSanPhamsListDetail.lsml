@@ -282,19 +282,6 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Số_lượng1"
-                  Kind="Value"
-                  DataType=":Decimal">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="XuatSanPhamChiTiet/Properties[Số_lượng]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Ghi_chú4"
                   Kind="Value"
                   DataType=":String?">
@@ -759,19 +746,6 @@
                         </ScreenExpressionTree>
                       </ContentItem.DataSource>
                     </ContentItem>
-                  </ContentItem>
-                  <ContentItem
-                    Name="Số_lượng"
-                    Kind="Value"
-                    DataType=":Decimal">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="XuatSanPhamChiTiet/Properties[Số_lượng]" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
                   </ContentItem>
                   <ContentItem
                     Name="Ghi_chú2"

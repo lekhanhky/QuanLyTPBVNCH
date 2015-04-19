@@ -208,6 +208,12 @@
       <Private>True</Private>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="Wijmo.LightSwitch.Common">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Server">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Server\Reference\Wijmo.LightSwitch.Server.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSources\QuanLyTPBVNCHData\NhapSanPhamChiTiet.lsml.vb">
@@ -250,6 +256,7 @@
     <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhams.lsml" />
     <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhamBenhs.lsml" />
     <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\XuatSanPhamChiTiets.lsml" />
+    <LightSwitchModel Include="DataSources\QuanLyTPBVNCHData\SoLuongs.lsml" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -30,7 +30,7 @@
     <SilverlightAppEntry>
     </SilverlightAppEntry>
     <OutOfBrowserSettingsFile>My Project\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
-    <EnableOutOfBrowser>True</EnableOutOfBrowser>
+    <EnableOutOfBrowser>False</EnableOutOfBrowser>
     <TestPageFileName>default.htm</TestPageFileName>
     <CreateTestPage>false</CreateTestPage>
     <ValidateXaml>true</ValidateXaml>
@@ -47,6 +47,9 @@
     <LightSwitchSDKPath Condition=" '$(LightSwitchSDKPath)' != '' and !HasTrailingSlash('$(LightSwitchSDKPath)')">$(LightSwitchSDKPath)\</LightSwitchSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
+    <SignManifests>False</SignManifests>
+    <ManifestCertificateThumbprint />
+    <ManifestKeyFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -254,6 +257,16 @@
     <Reference Include="System.Xml.Linq">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="Wijmo.LightSwitch.Client">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\Reference\Wijmo.LightSwitch.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Client.Design">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\DebugOnlyRef\Wijmo.LightSwitch.Client.Design.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="Wijmo.LightSwitch.Common">
+      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\Reference\Wijmo.LightSwitch.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\QUANLYTPBVNCH.Server\QUANLYTPBVNCH.Server.vbproj">
@@ -342,6 +355,7 @@
     <LightSwitchModel Include="Screens\NhomSanPhamsListDetail.lsml" />
     <LightSwitchModel Include="Screens\SanPhamsListDetail.lsml" />
     <LightSwitchModel Include="Screens\ThuongPheBinhsListDetail.lsml" />
+    <LightSwitchModel Include="Screens\ThuongPheBinhsListDetail1.lsml" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\close.png" />

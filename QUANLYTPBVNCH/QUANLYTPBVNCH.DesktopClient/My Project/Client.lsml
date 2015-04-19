@@ -69,6 +69,9 @@
     <ApplicationCommand
       Name="ScreenCommandShowThuongPheBinhsListDetail"
       Target="!module/Methods[ShowThuongPheBinhsListDetail]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowThuongPheBinhsListDetail1"
+      Target="!module/Methods[ShowThuongPheBinhsListDetail1]" />
   </Application.Commands>
   <Application.NavigationItems>
     <ApplicationNavigationGroup
@@ -137,6 +140,9 @@
       <ApplicationNavigationLink
         Name="link2"
         Command="!module/Commands[ScreenCommandShowXuatSanPhamsListDetail]" />
+      <ApplicationNavigationLink
+        Name="link3"
+        Command="!module/Commands[ScreenCommandShowThuongPheBinhsListDetail1]" />
     </ApplicationNavigationGroup>
   </Application.NavigationItems>
 </Application>

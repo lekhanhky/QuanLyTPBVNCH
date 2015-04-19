@@ -208,4 +208,16 @@
         Target="ServiceInterface:QuanLyTPBVNCHData" />
     </EntityContainer.Attributes>
   </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:SoLuong" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_XuatSanPhamChiTiet_SoLuong" />
+    </Association.Attributes>
+  </Association>
 </Application>

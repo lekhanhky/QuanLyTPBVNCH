@@ -33,5 +33,7 @@
     <ExtensionAssembly>C1.Silverlight.Zip.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
     <ExtensionAssembly>C1.Silverlight.Excel.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
     <ExtensionAssembly>C1.Silverlight.DateTimeEditors.5, Version=5.0.20142.419, Culture=neutral, PublicKeyToken=2AA4EC5576D6C3CE</ExtensionAssembly>
+    <ExtensionAssembly>Wijmo.LightSwitch.Client, Version=4.0.20142.37, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
+    <ExtensionAssembly>Wijmo.LightSwitch.Common, Version=4.0.20142.37, Culture=neutral, PublicKeyToken=null</ExtensionAssembly>
   </ExtensionAssemblies>
 </Configuration>
