@@ -28,7 +28,7 @@
               Name="ChuongTrinhs"
               Kind="Collection"
               DataType="CollectionView$ChuongTrinh"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="ChuongTrinhs" />
@@ -55,19 +55,6 @@
                     <ChainExpression />
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
-                <ContentItem
-                  Name="Id"
-                  Kind="Value"
-                  DataType=":Int32">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="ChuongTrinh/Properties[Id]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
                 <ContentItem
                   Name="Tên"
                   Kind="Value"
@@ -137,7 +124,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showViewChuongTrinh]">
+                        Target="!module/Methods[showAddEditChuongTrinh]">
                         <CallExpression.Attributes>
                           <AssociatedCollection
                             Collection="BrowseChuongTrinhs/Properties[ChuongTrinhs]" />
@@ -152,6 +139,16 @@
                           </ChainExpression>
                         </ArgumentExpression>
                       </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="msls-edit"
+                        ResultType=":String" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>

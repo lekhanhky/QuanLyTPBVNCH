@@ -28,7 +28,7 @@
               Name="Benhs"
               Kind="Collection"
               DataType="CollectionView$Benh"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="Benhs" />
@@ -124,7 +124,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showViewBenh]">
+                        Target="!module/Methods[showAddEditBenh]">
                         <CallExpression.Attributes>
                           <AssociatedCollection
                             Collection="BrowseBenhs/Properties[Benhs]" />
@@ -139,6 +139,16 @@
                           </ChainExpression>
                         </ArgumentExpression>
                       </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="msls-edit"
+                        ResultType=":String" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>

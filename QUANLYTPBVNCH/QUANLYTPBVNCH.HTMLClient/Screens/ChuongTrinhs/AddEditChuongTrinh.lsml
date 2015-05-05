@@ -10,7 +10,7 @@
       <SaveChangesTo
         EntityContainer="QuanLyTPBVNCHData" />
       <DisplayName
-        Value="CHƯƠNG TRÌNH" />
+        Value="CHƯƠNG TRÌNH CHI TIẾT" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem

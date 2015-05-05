@@ -5,18 +5,7 @@ myapp.AddEditXuatSanPham.Benhs_postRender = function (element, contentItem) {
     lsWire.list.enableMultiSelect(contentItem);
 };
 myapp.AddEditXuatSanPham.Thêm_Thoát_execute = function (screen) {
-    var list = screen.findContentItem("Benhs");
 
-    //var count = lsWire.list.selectedCount(list);
-
-    var selected = lsWire.list.selected(list);
-
-    //var text = "Món bạn đã chọn gồm \n\n";
-
-    _.forEach(selected, function (item) {
-      var newChiTiet = screen.XuatSanPhamBenhs.addNew();
-        newChiTiet.setBenh(item);
-     });
     // Write code here.
     screen.closePopup();
 };
@@ -39,8 +28,14 @@ myapp.AddEditXuatSanPham.Thêm_Thoát1_execute = function (screen) {
         newChiTiet.setGiá_vốn(0);
         newChiTiet.setPhần_trăm_thuế(0);
         });
-    // Write code here.
-    screen.closePopup();
+    myapp.applyChanges().then(function success() {
+        window.alert("LƯU THÀNH CÔNG !");
+    }, function fail(e) {
+        window.alert("LƯU THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
 
 };
 myapp.AddEditXuatSanPham.SanPhams_postRender = function (element, contentItem) {
@@ -91,5 +86,89 @@ myapp.AddEditXuatSanPham.ShowBenh_execute = function (screen) {
         });
     });
     // Show the Popup
-    screen.showPopup("Group");
+    screen.showPopup("GroupBenh");
+};
+myapp.AddEditXuatSanPham.THOÁT_execute = function (screen) {
+    // Write code here.
+    screen.closePopup();
+};
+myapp.AddEditXuatSanPham.LƯU_execute = function (screen) {
+    // Write code here.
+    var list = screen.findContentItem("Benhs");
+
+    //var count = lsWire.list.selectedCount(list);
+
+    var selected = lsWire.list.selected(list);
+
+    //var text = "Món bạn đã chọn gồm \n\n";
+
+    _.forEach(selected, function (item) {
+        var newChiTiet = screen.XuatSanPhamBenhs.addNew();
+        newChiTiet.setBenh(item);
+    });
+    lsWire.list.selectAll(list, false);
+    myapp.applyChanges().then(function success() {
+        window.alert("LƯU THÀNH CÔNG !");
+      }, function fail(e) {
+        window.alert("LƯU THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
+};
+myapp.AddEditXuatSanPham.ĐÓNG_execute = function (screen) {
+    // Write code here.
+    screen.closePopup();
+};
+myapp.AddEditXuatSanPham.XÓA_execute = function (screen) {
+    // Write code here.
+    screen.XuatSanPhamBenhs.deleteSelected();
+    myapp.applyChanges().then(function success() {
+        window.alert("XÓA THÀNH CÔNG !");
+        screen.closePopup();
+    }, function fail(e) {
+        window.alert("XÓA THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
+};
+myapp.AddEditXuatSanPham.ĐÓNG1_execute = function (screen) {
+    // Write code here.
+    screen.closePopup();
+};
+myapp.AddEditXuatSanPham.XÓA1_execute = function (screen) {
+    // Write code here.
+    screen.XuatSanPhamChiTiets.deleteSelected();
+    myapp.applyChanges().then(function success() {
+        window.alert("XÓA THÀNH CÔNG !");
+        screen.closePopup();
+    }, function fail(e) {
+        window.alert("XÓA THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
+};
+myapp.AddEditXuatSanPham.LƯU2_execute = function (screen) {
+    // Write code here.
+    myapp.applyChanges().then(function success() {
+        window.alert("LƯU THÀNH CÔNG !");
+    }, function fail(e) {
+        window.alert("LƯU THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
+};
+myapp.AddEditXuatSanPham.LƯU1_execute = function (screen) {
+    // Write code here.
+    myapp.applyChanges().then(function success() {
+        window.alert("LƯU THÀNH CÔNG !");
+    }, function fail(e) {
+        window.alert("LƯU THẤT BẠI - CẦN LÀM TƯƠI LẠI !");
+        //window.location.reload();
+        myapp.cancelChanges();
+        screen.closePopup();
+    });
 };

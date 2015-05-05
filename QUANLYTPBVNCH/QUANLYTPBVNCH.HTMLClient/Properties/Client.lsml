@@ -59,5 +59,8 @@
     <ApplicationNavigationMethodLink
       Name="link7"
       Method="!module/Methods[showBrowseThuongPheBinhs]" />
+    <ApplicationNavigationMethodLink
+      Name="link8"
+      Method="!module/Methods[showBrowseThuongPheBinhs1]" />
   </Application.NavigationItems>
 </Application>

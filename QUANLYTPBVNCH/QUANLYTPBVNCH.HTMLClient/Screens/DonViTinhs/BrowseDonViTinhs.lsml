@@ -28,7 +28,7 @@
               Name="DonViTinhs"
               Kind="Collection"
               DataType="CollectionView$DonViTinh"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="DonViTinhs" />
@@ -137,7 +137,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showViewDonViTinh]">
+                        Target="!module/Methods[showAddEditDonViTinh]">
                         <CallExpression.Attributes>
                           <AssociatedCollection
                             Collection="BrowseDonViTinhs/Properties[DonViTinhs]" />
@@ -152,6 +152,16 @@
                           </ChainExpression>
                         </ArgumentExpression>
                       </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="msls-edit"
+                        ResultType=":String" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ControlPropertySource>

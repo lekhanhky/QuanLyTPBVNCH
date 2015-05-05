@@ -10,7 +10,7 @@
       <SaveChangesTo
         EntityContainer="QuanLyTPBVNCHData" />
       <DisplayName
-        Value="KHÁM BỆNH - PHÁT THUỐC DC" />
+        Value="PHIẾU KHÁM CHI TIẾT" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -217,6 +217,24 @@
                   </ContentItem>
                 </ContentItem>
               </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="AddEditXuatSanPham/Methods[showDialog]">
+                        <ArgumentExpression
+                          Parameter="dialogName">
+                          <ConstantExpression
+                            Value="GroupChiTietBenh"
+                            ResultType=":String" />
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
               Name="XuatSanPhamChiTiets"
@@ -244,6 +262,10 @@
                   Name="SanPham"
                   Kind="Details"
                   DataType="SanPham">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Thuốc" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -256,29 +278,6 @@
                     Name="SanPham1"
                     Kind="Details"
                     DataType="SanPham">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="DonViTinh"
-                  Kind="Details"
-                  DataType="DonViTinh">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="XuatSanPhamChiTiet/Properties[DonViTinh]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="DonViTinh1"
-                    Kind="Details"
-                    DataType="DonViTinh">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
@@ -333,6 +332,24 @@
                   </ContentItem>
                 </ContentItem>
               </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.MobileWeb:RootCollectionControl/Properties[ItemTap]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <CallExpression
+                        Target="AddEditXuatSanPham/Methods[showDialog]">
+                        <ArgumentExpression
+                          Parameter="dialogName">
+                          <ConstantExpression
+                            Value="GroupChiTietSanPham"
+                            ResultType=":String" />
+                        </ArgumentExpression>
+                      </CallExpression>
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
@@ -355,21 +372,6 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Xóa_Bệnh"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="AddEditXuatSanPham/Methods[Xóa_Bệnh]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
                 Name="ShowGroupChiTiet"
                 Kind="Command">
                 <ContentItem.Attributes>
@@ -386,25 +388,10 @@
                           <ArgumentExpression
                             Parameter="dialogName">
                             <ConstantExpression
-                              Value="GroupChiTiet"
+                              Value="GroupSanPham"
                               ResultType=":String" />
                           </ArgumentExpression>
                         </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="Xóa_Thuốc_DC"
-                Kind="Command">
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="AddEditXuatSanPham/Methods[Xóa_Thuốc_DC]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -418,15 +405,38 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:DialogPages">
           <ContentItem
-            Name="Group"
+            Name="GroupBenh"
             Kind="Group">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Group Benh" />
+            </ContentItem.Attributes>
             <ContentItem
               Name="Group1"
               Kind="Group"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem
+                Name="LƯU"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[LƯU]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
                 Name="Thêm_Thoát"
                 Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="THOÁT" />
+                </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
@@ -491,7 +501,7 @@
             </ContentItem.PropertySources>
           </ContentItem>
           <ContentItem
-            Name="GroupChiTiet"
+            Name="GroupSanPham"
             Kind="Group">
             <ContentItem
               Name="Group2"
@@ -499,10 +509,11 @@
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem
                 Name="Thêm_Thoát1"
-                Kind="Command">
+                Kind="Command"
+                View="Microsoft.LightSwitch.MobileWeb:Button">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Thêm Thoát" />
+                    Value="LƯU" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -511,6 +522,21 @@
                       <ChainExpression>
                         <CallExpression
                           Target="AddEditXuatSanPham/Methods[Thêm_Thoát1]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="THOÁT"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[THOÁT]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -567,6 +593,268 @@
               </ControlPropertySource>
             </ContentItem.PropertySources>
           </ContentItem>
+          <ContentItem
+            Name="GroupChiTietBenh"
+            Kind="Group"
+            View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Chi tiết Bệnh" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="Group"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="XÓA"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[XÓA]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="LƯU1"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="LƯU" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[LƯU1]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ĐÓNG"
+                Kind="Command">
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[ĐÓNG]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="XuatSanPhamBenhs_selectedItem"
+              Kind="Details"
+              DataType="XuatSanPhamBenh">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="AddEditXuatSanPham/Properties[XuatSanPhamBenhs]" />
+                    <MemberExpression
+                      Member="selectedItem" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Ghi_chú1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="XuatSanPhamBenh/Properties[Ghi_chú]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Benh2"
+                Kind="Details"
+                DataType="Benh">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="XuatSanPhamBenh/Properties[Benh]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Benh3"
+                  Kind="Details"
+                  DataType="Benh">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            Name="GroupChiTietSanPham"
+            Kind="Group">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Chi tiết Thuốc - Dụng cụ" />
+            </ContentItem.Attributes>
+            <ContentItem
+              Name="Group3"
+              Kind="Group"
+              View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
+              <ContentItem
+                Name="XÓA1"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="XÓA" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[XÓA1]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="LƯU2"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="LƯU" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[LƯU2]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="ĐÓNG1"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="ĐÓNG" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddEditXuatSanPham/Methods[ĐÓNG1]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="XuatSanPhamChiTiets_selectedItem"
+              Kind="Details"
+              DataType="XuatSanPhamChiTiet">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="AddEditXuatSanPham/Properties[XuatSanPhamChiTiets]" />
+                    <MemberExpression
+                      Member="selectedItem" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Ghi_chú2"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="XuatSanPhamChiTiet/Properties[Ghi_chú]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="SoLuong2"
+                Kind="Details"
+                DataType="SoLuong">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Số lượng" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="XuatSanPhamChiTiet/Properties[SoLuong]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="SoLuong3"
+                  Kind="Details"
+                  DataType="SoLuong">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="SanPham2"
+                Kind="Details"
+                DataType="SanPham">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="XuatSanPhamChiTiet/Properties[SanPham]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="SanPham3"
+                  Kind="Details"
+                  DataType="SanPham">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
         </ContentItem>
         <ContentItem.PropertySources>
           <ControlPropertySource
@@ -620,11 +908,23 @@
       <ScreenMethod
         Name="Thêm_Thoát1" />
       <ScreenMethod
-        Name="Xóa_Bệnh" />
-      <ScreenMethod
-        Name="Xóa_Thuốc_DC" />
-      <ScreenMethod
         Name="ShowBenh" />
+      <ScreenMethod
+        Name="THOÁT" />
+      <ScreenMethod
+        Name="LƯU" />
+      <ScreenMethod
+        Name="XÓA" />
+      <ScreenMethod
+        Name="LƯU1" />
+      <ScreenMethod
+        Name="ĐÓNG" />
+      <ScreenMethod
+        Name="XÓA1" />
+      <ScreenMethod
+        Name="LƯU2" />
+      <ScreenMethod
+        Name="ĐÓNG1" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

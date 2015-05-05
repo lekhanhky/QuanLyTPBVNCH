@@ -257,16 +257,6 @@
     <Reference Include="System.Xml.Linq">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
-    <Reference Include="Wijmo.LightSwitch.Client">
-      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\Reference\Wijmo.LightSwitch.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Wijmo.LightSwitch.Client.Design">
-      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\DebugOnlyRef\Wijmo.LightSwitch.Client.Design.dll</HintPath>
-      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
-    </Reference>
-    <Reference Include="Wijmo.LightSwitch.Common">
-      <HintPath>..\_Pvt_Extensions\Wijmo.LightSwitch\Client\Reference\Wijmo.LightSwitch.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\QUANLYTPBVNCH.Server\QUANLYTPBVNCH.Server.vbproj">

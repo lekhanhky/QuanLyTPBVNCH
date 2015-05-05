@@ -153,9 +153,6 @@
       <Client>C1.LIGHTSWITCH.FLEXGRID.CLIENT;C1.LIGHTSWITCH.FLEXGRID.COMMON;C1.SILVERLIGHT.5;C1.SILVERLIGHT.FLEXGRID.5;C1.SILVERLIGHT.FLEXGRIDFILTER.5;C1.SILVERLIGHT.EXTENDED.5;C1.SILVERLIGHT.ZIP.5;C1.SILVERLIGHT.EXCEL.5;C1.SILVERLIGHT.DATETIMEEDITORS.5;C1.LIGHTSWITCH.FLEXGRID.CLIENT.DESIGN</Client>
       <Server>C1.LIGHTSWITCH.FLEXGRID.COMMON;C1.LIGHTSWITCH.FLEXGRID.SERVER</Server>
     </LightSwitchExtension>
-    <LightSwitchExtension Include="Extensions\C1D3.LightSwitch.lspkg">
-      <ExtensionId>C1D3.LightSwitch</ExtensionId>
-    </LightSwitchExtension>
     <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Cosmopolitan.lspkg">
       <ExtensionId>Microsoft.LightSwitch.Cosmopolitan</ExtensionId>
       <Client>MICROSOFT.LIGHTSWITCH.COSMOPOLITAN.CLIENT</Client>
@@ -164,11 +161,6 @@
       <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>
       <Client>MICROSOFT.LIGHTSWITCH.EXTENSIONS.CLIENT;MICROSOFT.LIGHTSWITCH.EXTENSIONS.DESIGN.CLIENT</Client>
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
-    </LightSwitchExtension>
-    <LightSwitchExtension Include="Extensions\Wijmo.LightSwitch.lspkg">
-      <ExtensionId>Wijmo.LightSwitch</ExtensionId>
-      <Client>WIJMO.LIGHTSWITCH.CLIENT;WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.CLIENT.DESIGN</Client>
-      <Server>WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.SERVER</Server>
     </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
